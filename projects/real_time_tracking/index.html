@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Alvaro Perez-Diaz</title>
+  <meta name="description" content="Personal website
+">
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/projects/real_time_tracking/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        <a class="page-link" href="/"><strong>Alvaro Perez-Diaz</strong>, PhD</a>
+    </span>
+    
+
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <a class="page-link" href="/projects">projects</a>
+        <a class="page-link" href="/publications">publications</a>
+        <a class="page-link" href="/assets/pdf/CV.pdf" target="_blank">CV</a>
+        <a class="page-link" href="/adventures">adventures</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Real-time GPS tracking</h1>
+    <h4 class="post-description">Easily track location and progress along a given route with the idea of being able to track people in long runs. I have been using this successfully in the last few months so that I can be tracked (and track my parter) in order to meet along the way or to be picked up at the end. I've been using the Overland app to transmit location data from my phone and hosting the server in PythonAnywhere.</h4>
+
+    
+    <h5 class="post-description">Skills: js, Leaflet, Python, Flask</h5>
+    
+
+    
+
+    
+
+    
+
+    <hr>
+  </header>
+
+  <article class="post-content Real-time GPS tracking clearfix">
+    
+    <div class="img_single">
+        <img class="col three" src="https://user-images.githubusercontent.com/4785303/104010342-4344c980-51a4-11eb-920c-fdf64beb573a.jpg"/>
+    </div>
+
+    
+
+    <p><br /> The idea is to be able to track a runner or cyclist along a route in real-time in order to be able to meet along the way or to pick them up at the end. While there are some companies that offer this kind of service, I didn’t find anything that worked well (tried a couple of apps) and thought that this should be easy to build and maintain.</p>
+
+<p>I have some experience using <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> and there are a number of cool plugins that deal with gpx data, so this was the obvious candidate. In terms of the web server, <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">Flask</a> is normally my framework of choice. An easy way to serve the map is to use <a href="https://www.pythonanywhere.com/" target="_blank">PythonAnywhere</a> or <a href="https://www.heroku.com/" target="_blank">Heroku</a>.</p>
+
+<p>On the phone side, I found the <a href="https://overland.p3k.app/" target="_blank">Overland app</a>, which is available for both Android and iOS, and does exactly what I need for this project. It lets you configure an end-point of your choice and it just sends GPS data. You can select the desired frequency and it has a lot of nice features like caching the data locally if no connection is available, etc. I’ve found battery consumption is very reasonable as well.</p>
+
+<p>With respect to the route, I normally upload a gpx file with my intended route and it is displayed in the map alongside with my progress. This is quite useful to infer how far in the runner is into the run, etc. Also, there are some statistics at the bottom, including the total distance travelled so far and the total ascent. These are computed purely relying on phone GPS data, which can be inaccurate (specially altitude, in some phones!), so I decided to query a free  <a href="https://elevation.racemap.com" target="_blank">DEM</a> service online to correct elevation data before it’s stored in the current trip.</p>
+
+<p>All in all, this project turned out to be quite useful and works well. It’s easy to maintain and can be easily deployed online for free, as mentioned above.</p>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2021 Alvaro Perez-Diaz.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and based on <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>
