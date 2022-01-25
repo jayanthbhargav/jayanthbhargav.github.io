@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jayanthbhargav.github.io/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jayanthbhargav.github.io/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jayanthbhargav.github.io/services/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jayanthbhargav.github.io/cv/</loc>
+  </url>
+
+  <url>
+    <loc>https://jayanthbhargav.github.io/</loc>
+  </url>
+  
+</urlset>
