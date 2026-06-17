@@ -115,11 +115,16 @@
   <!-- Hidden abstract block -->
   
    <span class="abstract hidden">
-    <p> We study a target coverage game in which a set of sensing agents coordinate their orientations to maximize target coverage, 
-      while an attacker adaptively relocates the deployed targets to minimize coverage. The proposed distributed framework enables 
-      agents to configure communication neighborhoods under limited communication bandwidth while coordinating their sensing orientations. 
-      Assuming a rational attacker following a no-regret learning strategy, the framework is shown to be efficient, scalable, and 
-      asymptotically achieves an approximate Nash equilibrium of the target coverage game. </p>   
+    <p> We study a target coverage problem in which a team of sensing agents, operating under limited communication, must collaboratively monitor 
+      targets that may be adaptively repositioned by an attacker. We model this interaction as a zero-sum game between the sensing team (known as 
+      the defender) and the attacker. However, computing an exact Nash equilibrium (NE) for this game is computationally prohibitive as the action 
+      space of the defender grows exponentially with the number of sensors and their possible orientations. Exploiting the submodularity property 
+      of the game's utility function, we propose a distributed framework that enables agents to self-configure their communication neighborhoods 
+      under bandwidth constraints and collaboratively maximize the target coverage. We establish theoretical guarantees showing that the resulting 
+      sensing strategies converge to an approximate NE of the game. To our knowledge, this is the first distributed, communication-aware approach 
+      that scales effectively for games with combinatorial action spaces while explicitly incorporating communication constraints. To this end, we 
+      leverage the distributed bandit-submodular optimization framework and the notion of Value of Coordination that were introduced in [1]. Through 
+      simulations, we show that our approach attains near-optimal game value and higher target coverage compared to baselines.</p>   
 </div>
   </li>
 
