@@ -744,21 +744,21 @@ html[data-theme="dark"] .theme-toggle:hover {
 
 /* My name */
 .publications-page .my-name {
-  color: #0077b6;
+  color: #4f6d7a;   /* muted blue-gray */
   font-weight: normal;
 }
 
 /* Paper titles */
 .publications-page li strong {
-  color: #B509AC;
+  color: #444444;   /* dark neutral gray */
   font-weight: normal;
 }
 
 /* Dark mode */
 html[data-theme="dark"] .publications-page .my-name {
-  color: #5bc0eb;
+  color: #9bb7c3;
 }
 
 html[data-theme="dark"] .publications-page li strong {
-  color: #e879f9;
+  color: #d0d0d0;
 }
