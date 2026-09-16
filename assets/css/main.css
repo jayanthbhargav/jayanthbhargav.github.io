@@ -745,15 +745,14 @@ html[data-theme="dark"] .theme-toggle:hover {
 /* My name */
 .publications-page .my-name {
   color: #0077b6;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 /* Paper titles */
 .publications-page li strong {
   color: #B509AC;
-  font-weight: 600;
+  font-weight: normal;
 }
-
 
 /* Dark mode */
 html[data-theme="dark"] .publications-page .my-name {
