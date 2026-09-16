@@ -49,6 +49,62 @@
 
     $(document).ready(function () {
 
+        // ---------------------------------------------------------
+// Highlight my name on the publications page
+// ---------------------------------------------------------
+
+const publicationsPage = document.querySelector('.publications-page');
+
+if (publicationsPage) {
+    const publicationEntries =
+        publicationsPage.querySelectorAll('.news li p');
+
+    publicationEntries.forEach(function (entry) {
+
+        // Find all plain-text nodes inside this publication
+        const walker = document.createTreeWalker(
+            entry,
+            NodeFilter.SHOW_TEXT
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach(function (node) {
+            const text = node.nodeValue;
+
+            if (!text.includes('J. Bhargav')) {
+                return;
+            }
+
+            const parts = text.split('J. Bhargav');
+            const fragment = document.createDocumentFragment();
+
+            parts.forEach(function (part, index) {
+                if (part) {
+                    fragment.appendChild(
+                        document.createTextNode(part)
+                    );
+                }
+
+                if (index < parts.length - 1) {
+                    const span = document.createElement('span');
+
+                    span.className = 'my-name';
+                    span.textContent = 'J. Bhargav';
+
+                    fragment.appendChild(span);
+                }
+            });
+
+            node.parentNode.replaceChild(fragment, node);
+        });
+    });
+}
+
         // Existing abstract functionality
         $('a.abstract').click(function () {
             $(this)
